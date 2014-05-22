@@ -1,0 +1,26 @@
+{
+  "name": "tap-map",
+  "version": "0.0.0",
+  "description": "Map your Untappd check-ins.",
+  "homepage": "http://tapmap.bradgignac.com",
+  "author": "Brad Gignac <bgignac@bradgignac.com>",
+  "license": "MIT",
+  "keywords": [
+    "beer",
+    "map",
+    "untappd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bradgignac/tapmap"
+  },
+  "bugs": {
+    "url": "https://github.com/bradgignac/tapmap/issues"
+  },
+  "scripts": {},
+  "dependencies": {
+    "cheerio": "^0.16.0",
+    "nomnom": "^1.6.2",
+    "request": "^2.36.0"
+  }
+}

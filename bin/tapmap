@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+var parser;
+
+parser = require('nomnom');
+parser.script('tapmap')
+  .command('user')
+    .help('Retrieve details for a user.')
+    .option('username', {
+      position: 1,
+      required: true
+    })
+    .callback(function (options) {
+      require('../lib/requests/getUser')(options.username, function (user) {
+        console.log(user);
+      });
+    })
+  .command('user')
+    .help('Retrieve check-ins for a user.')
+    .option('username', {
+      position: 1,
+      required: true
+    })
+    .callback(function (options) {
+      require('../lib/requests/listCheckins')(options.username, function (checkins) {
+
+      });
+    });
+
+parser.parse();
